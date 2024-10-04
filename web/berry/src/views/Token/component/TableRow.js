@@ -33,7 +33,12 @@ const COPY_OPTIONS = [
   },
   { key: 'ama', text: 'BotGem', url: 'ama://set-api-key?server={serverAddress}&key=sk-{key}', encode: true },
   { key: 'opencat', text: 'OpenCat', url: 'opencat://team/join?domain={serverAddress}&token=sk-{key}', encode: true },
-  { key: 'lobechat', text: 'LobeChat', url: 'https://lobehub.com/?settings={"keyVaults":{"openai":{"apiKey":"user-key","baseURL":"https://your-proxy.com/v1"}}}', encode: true }
+  {
+    key: 'lobechat',
+    text: 'tblu LobeChat',
+    url: 'https://chat.tblu.xyz/?settings={"keyVaults":{"openai":{"apiKey":"sk-{key}","baseURL":"{serverAddress}/v1"}}}',
+    encode: true
+  }
 ];
 
 function replacePlaceholders(text, key, serverAddress) {
